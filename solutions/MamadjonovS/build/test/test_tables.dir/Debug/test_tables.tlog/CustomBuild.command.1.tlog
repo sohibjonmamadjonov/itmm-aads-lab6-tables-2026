@@ -1,0 +1,10 @@
+^C:\ITMM-AADS-LAB6-TABLES-2026\SOLUTIONS\MAMADJONOVS\TEST\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/itmm-aads-lab6-tables-2026/solutions/MamadjonovS -BC:/itmm-aads-lab6-tables-2026/solutions/MamadjonovS/build --check-stamp-file C:/itmm-aads-lab6-tables-2026/solutions/MamadjonovS/build/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
