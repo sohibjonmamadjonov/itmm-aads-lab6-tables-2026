@@ -23,11 +23,14 @@ public:
     virtual std::string getName() const = 0;
 
     // Для тестирования
-    virtual int getOperationCount() const { return operationCount; }
-    virtual void resetOperationCount() { operationCount = 0; }
-    virtual void incOperationCount() { operationCount++; }
+    int getOperationCount() const { return operationCount; }
+    void resetOperationCount() { operationCount = 0; }
+ 
 
-protected:
+protected:  
+    void incOperationCount() { operationCount++; }
+
+private:
     int operationCount = 0;
 };
 
